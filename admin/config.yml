@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "settings"
+    label: "Einstellungen"
+    files:
+      - name: "general"
+        label: "Allgemein"
+        file: "data/settings.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string", default: "Studio Notturno"}
+          - {label: "Claim DE", name: "claim_de", widget: "string", default: "KI liefert. Geschmack entscheidet."}
+          - {label: "Claim EN", name: "claim_en", widget: "string", default: "The eye your AI is missing."}
+          - {label: "Subtext DE", name: "sub_de", widget: "text", default: "Creative Consultation. AI Production. Strategische Kommunikation."}
+          - {label: "Subtext EN", name: "sub_en", widget: "text", default: "Creative Consultation. AI Production. Strategic Communication."}
+          - {label: "E-Mail", name: "email", widget: "string", default: "hello@studionotturno.de"}
+          - {label: "LinkedIn URL", name: "linkedin", widget: "string", default: "https://linkedin.com"}
+
+  - name: "projects"
+    label: "Projekte"
+    folder: "data/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Nummer", name: "number", widget: "string"}
+      - {label: "Kunde", name: "client", widget: "string"}
+      - {label: "Akzent-Wort", name: "client_accent", widget: "string"}
+      - {label: "Typ DE", name: "type_de", widget: "string"}
+      - {label: "Typ EN", name: "type_en", widget: "string"}
+      - {label: "Beschreibung DE", name: "desc_de", widget: "text"}
+      - {label: "Beschreibung EN", name: "desc_en", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Jahr", name: "year", widget: "string"}
+      - {label: "Bild", name: "image", widget: "image"}
+
+  - name: "services"
+    label: "Leistungen"
+    files:
+      - name: "services"
+        label: "What I do"
+        file: "data/services.json"
+        fields:
+          - label: "Leistungen"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Nummer", name: "number", widget: "string"}
+              - {label: "Titel Zeile 1", name: "title1", widget: "string"}
+              - {label: "Titel Zeile 2 (Akzent)", name: "title2", widget: "string"}
+              - {label: "Beschreibung DE", name: "desc_de", widget: "text"}
+              - {label: "Beschreibung EN", name: "desc_en", widget: "text"}
+              - {label: "Tags", name: "tags", widget: "list"}
