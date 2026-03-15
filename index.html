@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Studio Notturno — Creative Consultant & AI Conductor</title>
-<meta name="description" content="Studio Notturno — Creative Consultation, AI Production und Marketing Strategie. KI liefert. Geschmack entscheidet.">
+<meta name="description" content="Studio Notturno — Creative Consultation, AI Production. KI liefert. Geschmack entscheidet.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -64,7 +64,7 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .svc-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
 .svc-tag{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;border:0.5px solid rgba(200,255,0,0.35);padding:5px 14px;color:rgba(200,255,0,0.9);font-family:'DM Mono',monospace}
 .network-section{border-bottom:0.5px solid rgba(255,255,255,0.04)}
-.network{background:#0d0d0d;padding:2.5rem 3rem;border-top:0.5px solid rgba(255,255,255,0.04)}
+.network{background:#0d0d0d;padding:2.5rem 3rem}
 .net-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);font-family:'DM Mono',monospace;margin-bottom:0.6rem}
 .net-claim{font-family:'Outfit',sans-serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:200;color:#f0f0f0;letter-spacing:-0.02em;margin-bottom:0.75rem}
 .net-claim em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent)}
@@ -140,7 +140,7 @@ body.lang-de .en-text{display:none}
   .work-grid{grid-template-columns:1fr 1fr}
   .network{padding:2rem 1.5rem}
   .cta{padding:3rem 1.5rem}
-  footer{padding:1.5rem 1.5rem;flex-direction:column;align-items:flex-start;gap:0.75rem}
+  footer{padding:1.5rem;flex-direction:column;align-items:flex-start;gap:0.75rem}
 }
 </style>
 </head>
@@ -197,22 +197,34 @@ body.lang-de .en-text{display:none}
   <div class="svc-cards">
     <div class="svc-card active" onclick="selectService(0)">
       <div class="svc-n">01</div>
-      <div class="svc-card-title"><span class="de-text">Creative Consulting<br><span>& Conception</span></span><span class="en-text">Creative Consulting<br><span>& Conception</span></span></div>
+      <div class="svc-card-title">
+        <span class="de-text">Creative Consulting<br><span>&amp; Conception</span></span>
+        <span class="en-text">Creative Consulting<br><span>&amp; Conception</span></span>
+      </div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(1)">
       <div class="svc-n">02</div>
-      <div class="svc-card-title"><span class="de-text">Projekt<br><span>Management</span></span><span class="en-text">Project<br><span>Management</span></span></div>
+      <div class="svc-card-title">
+        <span class="de-text">Projekt<br><span>Management</span></span>
+        <span class="en-text">Project<br><span>Management</span></span>
+      </div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(2)">
       <div class="svc-n">03</div>
-      <div class="svc-card-title"><span class="de-text">AI Production<br><span>& Visualisierung</span></span><span class="en-text">AI Production<br><span>& Visualisation</span></span></div>
+      <div class="svc-card-title">
+        <span class="de-text">AI Production<br><span>&amp; Visualisierung</span></span>
+        <span class="en-text">AI Production<br><span>&amp; Visualisation</span></span>
+      </div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(3)">
       <div class="svc-n">04</div>
-      <div class="svc-card-title"><span class="de-text">AI Consulting<br><span>& Strategy</span></span><span class="en-text">AI Consulting<br><span>& Strategy</span></span></div>
+      <div class="svc-card-title">
+        <span class="de-text">AI Consulting<br><span>&amp; Strategy</span></span>
+        <span class="en-text">AI Consulting<br><span>&amp; Strategy</span></span>
+      </div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
   </div>
@@ -222,7 +234,7 @@ body.lang-de .en-text{display:none}
       <div class="svc-tags" id="svcTags"></div>
     </div>
   </div>
-  </section>
+</section>
 
 <section class="split" id="about">
   <div class="split-left">
@@ -260,11 +272,11 @@ body.lang-de .en-text{display:none}
   </div>
   <div class="work-grid">
     <div class="proj">
-      <img src="157.1-invideo-anon_bob_2.png" alt="Santé Naturals">
+      <img src="157.1-invideo-anon_bob_2.png" alt="Sante Naturals">
       <div class="proj-spec">Spec Work</div>
       <div class="proj-overlay">
         <div class="proj-num">01</div>
-        <div class="proj-title">Santé <em>Naturals</em></div>
+        <div class="proj-title">Sante <em>Naturals</em></div>
         <div class="proj-type">Campaign Concept · Beauty</div>
         <a href="selected-work.html" class="proj-cta">View project →</a>
       </div>
@@ -296,9 +308,8 @@ body.lang-de .en-text{display:none}
   </div>
 </section>
 
-
 <div class="network-section">
-<div class="network">
+  <div class="network">
     <div class="net-label de-text">Netzwerk</div>
     <div class="net-label en-text">Network</div>
     <div class="net-claim de-text">Für alles weitere habe ich <em>die richtigen Menschen.</em></div>
@@ -318,18 +329,16 @@ body.lang-de .en-text{display:none}
       <span class="pill en-text">PR &amp; Communications</span>
     </div>
   </div>
-
 </div>
-
 
 <section class="cta" id="contact">
   <div class="cta-label">Let's talk.</div>
   <h2 class="cta-h de-text">KI produziert.<br><em>Das Auge entscheidet.</em></h2>
   <h2 class="cta-h en-text">The eye<br><em>your AI is missing.</em></h2>
-  <span class="cta-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69e939a9a99b6858283929f999899828283849899d89293">[email&#160;protected]</a></span>
+  <span class="cta-email">hello@studionotturno.de</span>
   <div>
-    <a href="/cdn-cgi/l/email-protection#ec8489808083ac9f989988858382839898999e8283c28889" class="btn-dark de-text">Jetzt schreiben</a>
-    <a href="/cdn-cgi/l/email-protection#afc7cac3c3c0efdcdbdacbc6c0c1c0dbdbdaddc1c081cbca" class="btn-dark en-text">Get in touch</a>
+    <a href="mailto:hello@studionotturno.de" class="btn-dark de-text">Jetzt schreiben</a>
+    <a href="mailto:hello@studionotturno.de" class="btn-dark en-text">Get in touch</a>
   </div>
 </section>
 
@@ -347,7 +356,7 @@ body.lang-de .en-text{display:none}
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const svcData=[
   {
     de:'Art Direction, Kampagnenkonzepte, Events — das kreative Urteil das den Unterschied macht. Von der ersten Idee bis zum fertigen Konzept, immer mit dem Auge für das was wirklich funktioniert.',
@@ -377,7 +386,7 @@ const svcData=[
 
 let current=0;
 
-function renderPanel(i, lang){
+function renderPanel(i,lang){
   document.getElementById('svcDesc').textContent=svcData[i][lang];
   document.getElementById('svcTags').innerHTML=svcData[i]['tags_'+lang].map(t=>'<span class="svc-tag">'+t+'</span>').join('');
 }
@@ -392,7 +401,7 @@ function selectService(i){
   current=i;
   document.querySelectorAll('.svc-card').forEach((c,idx)=>c.classList.toggle('active',idx===i));
   const lang=document.body.classList.contains('lang-en')?'en':'de';
-  renderPanel(i, lang);
+  renderPanel(i,lang);
   panel.classList.add('open');
 }
 
@@ -403,3 +412,15 @@ tickerItems.forEach(item=>{const el=document.createElement('span');el.className=
 document.getElementById('langToggle').addEventListener('click',()=>{
   const b=document.body;
   if(b.classList.contains('lang-de')){b.classList.remove('lang-de');b.classList.add('lang-en');}
+  else{b.classList.remove('lang-en');b.classList.add('lang-de');}
+  const panel=document.getElementById('svcPanel');
+  if(panel.classList.contains('open')){
+    const lang=b.classList.contains('lang-en')?'en':'de';
+    renderPanel(current,lang);
+  }
+});
+
+renderPanel(0,'de');
+</script>
+</body>
+</html>
