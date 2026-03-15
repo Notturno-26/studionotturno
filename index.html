@@ -39,8 +39,8 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .btn:hover{opacity:0.85}
 .btn-ghost{background:transparent;color:var(--accent);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;padding:12px 26px;cursor:pointer;font-family:'DM Mono',monospace;text-decoration:none;display:inline-block;border:0.5px solid rgba(200,255,0,0.4);transition:background 0.3s,color 0.3s}
 .btn-ghost:hover{background:var(--accent);color:#080808}
-.ticker-wrap{overflow:hidden;padding:0.9rem 0;background:var(--accent)}
-.ticker-track{display:flex;width:max-content;animation:ticker 27s linear infinite}
+.ticker-wrap{overflow:hidden;padding:0.9rem 0;background:var(--accent);opacity:0;transition:opacity 0.6s ease}
+.ticker-track{display:flex;width:max-content;animation:ticker 40s linear infinite}
 .ticker-item{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(8,8,8,0.65);padding:0 2rem;border-right:0.5px solid rgba(8,8,8,0.12);font-family:'DM Mono',monospace;white-space:nowrap}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .services{padding:0 3rem;border-bottom:0.5px solid rgba(255,255,255,0.04)}
@@ -49,7 +49,7 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .sec-title span{color:var(--accent);font-family:'Cormorant Garamond',serif;font-style:italic}
 .sec-link{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;transition:color 0.3s}
 .sec-link:hover{color:var(--accent)}
-.svc-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.06);margin-top:2rem}
+.svc-cards{display:grid;gap:1px;background:rgba(255,255,255,0.06);margin-top:2rem}
 .svc-card{background:#080808;padding:2rem 1.8rem;cursor:pointer;display:flex;flex-direction:column;gap:0.75rem;position:relative;border-bottom:2px solid transparent;transition:background 0.3s,border-color 0.3s}
 .svc-card:hover,.svc-card.active{background:#0d0d0d;border-bottom-color:var(--accent)}
 .svc-n{font-size:0.62rem;letter-spacing:0.2em;color:var(--accent);font-family:'DM Mono',monospace}
@@ -184,7 +184,7 @@ body.lang-de .en-text{display:none}
   </div>
 </section>
 
-<div class="ticker-wrap">
+<div class="ticker-wrap" id="tickerWrap">
   <div class="ticker-track" id="ticker"></div>
 </div>
 
@@ -327,10 +327,10 @@ body.lang-de .en-text{display:none}
   <div class="cta-label">Let's talk.</div>
   <h2 class="cta-h de-text">KI produziert.<br><em>Das Auge entscheidet.</em></h2>
   <h2 class="cta-h en-text">The eye<br><em>your AI is missing.</em></h2>
-  <span class="cta-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8be3eee7e7e4cbf8fffeefe2e4e5e4fffffef9e5e4a5efee">[email&#160;protected]</a></span>
+  <span class="cta-email">hello@studionotturno.de</span>
   <div>
-    <a href="/cdn-cgi/l/email-protection#b6ded3dadad9f6c5c2c3d2dfd9d8d9c2c2c3c4d8d998d2d3" class="btn-dark de-text">Jetzt schreiben</a>
-    <a href="/cdn-cgi/l/email-protection#1d75787171725d6e696879747273726969686f7372337978" class="btn-dark en-text">Get in touch</a>
+    <a href="mailto:hello@studionotturno.de" class="btn-dark de-text">Jetzt schreiben</a>
+    <a href="mailto:hello@studionotturno.de" class="btn-dark en-text">Get in touch</a>
   </div>
 </section>
 
@@ -348,7 +348,7 @@ body.lang-de .en-text{display:none}
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const svcData=[
   {
     de:'Von Storyboards und Animatics für Kampagnen bis zur skalierten Asset-Produktion für E-Commerce — kuratiert mit Erfahrung, in einem Bruchteil der üblichen Zeit. Plus Beratung wie KI-Tools sinnvoll in bestehende Workflows integriert werden.',
@@ -407,6 +407,10 @@ document.getElementById('langToggle').addEventListener('click',()=>{
 });
 
 renderPanel(0,'de');
+
+window.addEventListener('load',()=>{
+  document.getElementById('tickerWrap').style.opacity='1';
+});
 </script>
 </body>
 </html>
