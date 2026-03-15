@@ -391,7 +391,11 @@ document.getElementById('langToggle').addEventListener('click',()=>{
   const panel=document.getElementById('svcPanel');
   if(panel.classList.contains('open')){
     const lang=b.classList.contains('lang-en')?'en':'de';
+    document.getElementById('svcDesc').textContent=svcData[current][lang];if(panel.classList.contains('open')){
+    const lang=b.classList.contains('lang-en')?'en':'de';
     document.getElementById('svcDesc').textContent=svcData[current][lang];
+    document.getElementById('svcTags').innerHTML=svcData[current].tags.map(t=>`<span class="svc-tag">${t}</span>`).join('');
+  }
   }
 });
 </script>
