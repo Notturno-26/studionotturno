@@ -13,8 +13,6 @@
 :root{--bg:#080808;--cream:#f0f0f0;--muted:#999;--dim:#444;--accent:#c8ff00}
 html{font-size:16px;scroll-behavior:smooth}
 body{background:var(--bg);color:var(--cream);font-family:'Outfit',sans-serif;overflow-x:hidden}
-
-/* NAV */
 nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;border-bottom:0.5px solid rgba(255,255,255,0.06);position:sticky;top:0;z-index:100}
 .nav-logo{display:flex;align-items:baseline;gap:0.4rem;text-decoration:none}
 .nav-logo-s{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:300;color:#f0f0f0}
@@ -24,8 +22,6 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .nav-links a:hover{color:var(--accent)}
 .nav-lang{font-size:0.7rem;letter-spacing:0.1em;border:0.5px solid rgba(200,255,0,0.3);padding:5px 12px;color:var(--accent);cursor:pointer;background:transparent;font-family:'DM Mono',monospace;transition:background 0.3s,color 0.3s}
 .nav-lang:hover{background:var(--accent);color:#080808}
-
-/* HERO */
 .hero-block{background:linear-gradient(135deg,#d4ff80,#a0ffcc,#c0f0ff,#e8ff80,#d4ff80);background-size:400% 400%;animation:flowGrad 18s ease infinite;padding:5rem 3rem 4rem;text-align:center;position:relative}
 @keyframes flowGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .hero-est{font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(8,8,8,0.4);margin-bottom:1.5rem;font-family:'DM Mono',monospace}
@@ -33,8 +29,6 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .hero-notturno{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5.5vw,4rem);font-style:italic;color:rgba(8,8,8,0.5);margin-top:0.2rem}
 .hero-scroll{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(8,8,8,0.35);font-family:'DM Mono',monospace;animation:bounce 2s ease infinite}
 @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(4px)}}
-
-/* CLAIM */
 .claim{padding:3rem 3rem;border-bottom:0.5px solid rgba(255,255,255,0.04);display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end}
 .claim-h{font-family:'Outfit',sans-serif;font-size:clamp(2.2rem,5.5vw,4rem);font-weight:200;line-height:0.95;letter-spacing:-0.03em;color:#f0f0f0}
 .claim-h span{color:var(--accent)}
@@ -45,14 +39,10 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .btn:hover{opacity:0.85}
 .btn-ghost{background:transparent;color:var(--accent);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;padding:12px 26px;cursor:pointer;font-family:'DM Mono',monospace;text-decoration:none;display:inline-block;border:0.5px solid rgba(200,255,0,0.4);transition:background 0.3s,color 0.3s}
 .btn-ghost:hover{background:var(--accent);color:#080808}
-
-/* TICKER */
 .ticker-wrap{overflow:hidden;padding:0.9rem 0;background:var(--accent)}
 .ticker-track{display:flex;width:max-content;animation:ticker 26s linear infinite}
 .ticker-item{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(8,8,8,0.65);padding:0 2rem;border-right:0.5px solid rgba(8,8,8,0.12);font-family:'DM Mono',monospace;white-space:nowrap}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* SERVICES */
 .services{padding:0 3rem;border-bottom:0.5px solid rgba(255,255,255,0.04)}
 .sec-header{display:flex;justify-content:space-between;align-items:baseline;padding:3rem 0 0}
 .sec-title{font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:200;letter-spacing:-0.02em}
@@ -60,7 +50,7 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .sec-link{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;transition:color 0.3s}
 .sec-link:hover{color:var(--accent)}
 .svc-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.06);margin-top:2rem}
-.svc-card{background:#080808;padding:2rem 1.8rem;cursor:pointer;transition:background 0.3s;display:flex;flex-direction:column;gap:0.75rem;position:relative;border-bottom:2px solid transparent;transition:background 0.3s,border-color 0.3s}
+.svc-card{background:#080808;padding:2rem 1.8rem;cursor:pointer;display:flex;flex-direction:column;gap:0.75rem;position:relative;border-bottom:2px solid transparent;transition:background 0.3s,border-color 0.3s}
 .svc-card:hover,.svc-card.active{background:#0d0d0d;border-bottom-color:var(--accent)}
 .svc-n{font-size:0.62rem;letter-spacing:0.2em;color:var(--accent);font-family:'DM Mono',monospace}
 .svc-card-title{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:200;color:#f0f0f0;letter-spacing:-0.02em;line-height:1.25;flex:1}
@@ -81,8 +71,6 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .pills{display:flex;flex-wrap:wrap;gap:8px}
 .pill{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;border:0.5px solid rgba(255,255,255,0.1);padding:5px 14px;color:#777;font-family:'DM Mono',monospace;transition:border-color 0.3s,color 0.3s}
 .pill:hover{border-color:rgba(200,255,0,0.3);color:var(--accent)}
-
-/* ABOUT + SCALE */
 .split{display:grid;grid-template-columns:1fr 1fr;border-bottom:0.5px solid rgba(255,255,255,0.04)}
 .split-left{padding:3rem;border-right:0.5px solid rgba(255,255,255,0.04)}
 .split-right{padding:3rem}
@@ -100,8 +88,6 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .about-title{font-size:0.65rem;letter-spacing:0.1em;color:var(--accent);font-family:'DM Mono',monospace;margin-top:3px}
 .about-p{font-size:0.85rem;color:var(--muted);line-height:1.9;font-family:'DM Mono',monospace}
 .about-p+.about-p{margin-top:0.75rem}
-
-/* WORK PREVIEW */
 .work-preview{padding:3rem;border-bottom:0.5px solid rgba(255,255,255,0.04)}
 .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:2rem}
 .proj{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4}
@@ -121,15 +107,12 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .proj-spec{position:absolute;top:1rem;left:1rem;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;background:rgba(8,8,8,0.7);border:0.5px solid rgba(200,255,0,0.3);color:var(--accent);padding:3px 10px;font-family:'DM Mono',monospace;opacity:0;transform:translateY(-6px);transition:opacity 0.4s ease 0.1s,transform 0.4s ease 0.1s}
 .proj:hover .proj-spec{opacity:1;transform:translateY(0)}
 .work-more{display:flex;justify-content:center;margin-top:1.5rem}
-
-/* CTA */
 .cta{padding:4rem 3rem;text-align:center;background:var(--accent)}
 .cta-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(8,8,8,0.4);margin-bottom:1rem;font-family:'DM Mono',monospace}
 .cta-h{font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,4.5vw,3rem);font-weight:200;letter-spacing:-0.02em;color:#080808;line-height:1;margin-bottom:0.75rem}
 .cta-h em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em}
 .cta-email{font-size:0.82rem;letter-spacing:0.12em;color:rgba(8,8,8,0.5);font-family:'DM Mono',monospace;display:block;margin-bottom:1.5rem}
-
-/* FOOTER */
+.btn-dark{background:#080808;color:var(--accent);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;padding:13px 28px;cursor:pointer;font-family:'DM Mono',monospace;text-decoration:none;display:inline-block;border:none}
 footer{padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:0.5px solid rgba(255,255,255,0.04)}
 .footer-logo{display:flex;align-items:baseline;gap:0.35rem}
 .footer-logo-s{font-family:'Outfit',sans-serif;font-size:0.82rem;font-weight:300;color:#444}
@@ -138,10 +121,8 @@ footer{padding:1.5rem 3rem;display:flex;justify-content:space-between;align-item
 .footer-links{display:flex;gap:1.5rem;align-items:center}
 .footer-links a{font-size:0.65rem;letter-spacing:0.1em;color:var(--dim);text-decoration:none;font-family:'DM Mono',monospace;transition:color 0.3s}
 .footer-links a:hover{color:var(--accent)}
-
 body.lang-en .de-text{display:none}
 body.lang-de .en-text{display:none}
-
 @media(max-width:768px){
   nav{padding:1rem 1.5rem}.nav-links{display:none}
   .hero-block{padding:4rem 1.5rem 3rem}
@@ -216,22 +197,22 @@ body.lang-de .en-text{display:none}
     <div class="svc-card active" onclick="selectService(0)">
       <div class="svc-n">01</div>
       <div class="svc-card-title">Creative Consulting<br><span>&amp; Conception</span></div>
-      <div class="svc-hint">Mehr erfahren ↓</div>
+      <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(1)">
       <div class="svc-n">02</div>
       <div class="svc-card-title">Projekt<br><span>Management</span></div>
-      <div class="svc-hint">Mehr erfahren ↓</div>
+      <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(2)">
       <div class="svc-n">03</div>
       <div class="svc-card-title">AI Production<br><span>&amp; Visualisierung</span></div>
-      <div class="svc-hint">Mehr erfahren ↓</div>
+      <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(3)">
       <div class="svc-n">04</div>
       <div class="svc-card-title">AI Consulting<br><span>&amp; Strategy</span></div>
-      <div class="svc-hint">Mehr erfahren ↓</div>
+      <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
   </div>
   <div class="svc-panel open" id="svcPanel">
@@ -246,20 +227,23 @@ body.lang-de .en-text{display:none}
     </div>
   </div>
   <div class="network">
-    <div class="net-label">Netzwerk</div>
+    <div class="net-label de-text">Netzwerk</div>
+    <div class="net-label en-text">Network</div>
     <div class="net-claim de-text">Für alles weitere habe ich <em>die richtigen Menschen.</em></div>
     <div class="net-claim en-text">For everything else I have <em>the right people.</em></div>
     <p class="net-p de-text">Ich arbeite mit einem kuratierten Netzwerk aus Experten zusammen — je nach Projektbedarf. So bekommst du immer die beste Person für die Aufgabe, ohne eine große Agentur zu engagieren.</p>
     <p class="net-p en-text">I work with a curated network of experts — depending on project needs. You always get the best person for the job, without engaging a large agency.</p>
     <div class="pills">
-      <span class="pill">Strategie &amp; Beratung</span>
+      <span class="pill de-text">Strategie &amp; Beratung</span>
+      <span class="pill en-text">Strategy &amp; Consulting</span>
       <span class="pill">Copywriting</span>
       <span class="pill">Content Production</span>
       <span class="pill">Art Direction</span>
       <span class="pill">UX &amp; Design</span>
       <span class="pill">Film &amp; Video</span>
       <span class="pill">Social Media</span>
-      <span class="pill">PR &amp; Kommunikation</span>
+      <span class="pill de-text">PR &amp; Kommunikation</span>
+      <span class="pill en-text">PR &amp; Communications</span>
     </div>
   </div>
 </section>
@@ -269,7 +253,7 @@ body.lang-de .en-text{display:none}
     <div class="sec-label">What I see.</div>
     <div class="scale-h de-text">Eine Person.<br><span>Kein Overhead. Volle Wirkung.</span></div>
     <div class="scale-h en-text">One person.<br><span>The output of three.</span></div>
-    <p class="scale-p de-text">KI richtig eingesetzt bedeutet mehr Output in weniger Zeit — ohne dass Qualität oder kreatives Urteil auf der Strecke bleiben.Kampagnen, Konzepte und Creatives in einem Bruchteil der üblichen Zeit — mit dem kreativen Urteil das den Unterschied macht.</p>
+    <p class="scale-p de-text">KI richtig eingesetzt bedeutet mehr Output in weniger Zeit — ohne dass Qualität oder kreatives Urteil auf der Strecke bleiben. Kampagnen, Konzepte und Creatives in einem Bruchteil der üblichen Zeit — mit dem kreativen Urteil das den Unterschied macht.</p>
     <p class="scale-p en-text">AI tools used right multiply output without losing quality. Campaigns, concepts and creatives in a fraction of the usual time — with the creative judgment that makes the difference.</p>
     <div class="stats-row">
       <div><div class="stat-n">3×</div><div class="stat-l de-text">mehr Output</div><div class="stat-l en-text">more Output</div></div>
@@ -342,8 +326,8 @@ body.lang-de .en-text{display:none}
   <h2 class="cta-h en-text">The eye<br><em>your AI is missing.</em></h2>
   <span class="cta-email">hello@studionotturno.de</span>
   <div>
-
-    <a href="mailto:hello@studionotturno.de" class="btn-dark en-text" style="background:#080808;color:var(--accent);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;padding:13px 28px;cursor:pointer;font-family:'DM Mono',monospace;text-decoration:none;display:inline-block;border:none">Get in touch</a>
+    <a href="mailto:hello@studionotturno.de" class="btn-dark de-text">Jetzt schreiben</a>
+    <a href="mailto:hello@studionotturno.de" class="btn-dark en-text">Get in touch</a>
   </div>
 </section>
 
@@ -363,10 +347,26 @@ body.lang-de .en-text{display:none}
 
 <script>
 const svcData=[
-  {desc:'Art Direction, Kampagnenkonzepte, Events und Aktivierungen — das kreative Urteil das den Unterschied macht. Von der ersten Idee bis zum fertigen Konzept, immer mit dem Auge für das was wirklich funktioniert.',tags:['Art Direction','Kampagnen','Events','Aktivierungen','Concepting']},
-  {desc:'Von Brief bis Abgabe. Koordination, Timing und Lieferung — ohne Overhead, mit direktem Zugang. Ich halte die Fäden zusammen damit du dich auf das Wesentliche konzentrieren kannst.',tags:['Briefing','Koordination','Delivery','Timeline']},
-  {desc:'Storyboards, Animatics und Visualisierungen — skaliert mit KI, kuratiert mit Erfahrung. Die Brücke zwischen kreativer Idee und technischem Output, in einem Bruchteil der üblichen Zeit.',tags:['Storyboard','Animatic','Visualisierung','Skalierung']},
-  {desc:'Wie KI-Tools sinnvoll in bestehende kreative Prozesse integriert werden. Vom ersten Prompt bis zum skalierbaren Workflow — mit dem Fokus auf Qualität statt Quantität.',tags:['Workflow','Integration','Beratung','Skalierung']}
+  {
+    de:'Art Direction, Kampagnenkonzepte, Events und Aktivierungen — das kreative Urteil das den Unterschied macht. Von der ersten Idee bis zum fertigen Konzept, immer mit dem Auge für das was wirklich funktioniert.',
+    en:'Art direction, campaign concepts, events and activations — the creative judgment that makes the difference. From the first idea to the finished concept, always with an eye for what really works.',
+    tags:['Art Direction','Campaigns','Events','Concepting']
+  },
+  {
+    de:'Von Brief bis Abgabe. Koordination, Timing und Lieferung — ohne Overhead, mit direktem Zugang. Ich halte die Fäden zusammen damit du dich auf das Wesentliche konzentrieren kannst.',
+    en:'From brief to delivery. Coordination, timing and execution — no overhead, direct access. I keep everything on track so you can focus on what matters.',
+    tags:['Briefing','Coordination','Delivery','Timeline']
+  },
+  {
+    de:'Storyboards, Animatics und Visualisierungen — skaliert mit KI, kuratiert mit Erfahrung. Die Brücke zwischen kreativer Idee und technischem Output, in einem Bruchteil der üblichen Zeit.',
+    en:'Storyboards, animatics and visualisations — scaled with AI, curated with experience. The bridge between creative idea and technical output, in a fraction of the usual time.',
+    tags:['Storyboard','Animatic','Visualisation','Scaling']
+  },
+  {
+    de:'Wie KI-Tools sinnvoll in bestehende kreative Prozesse integriert werden. Vom ersten Prompt bis zum skalierbaren Workflow — mit dem Fokus auf Qualität statt Quantität.',
+    en:'How AI tools integrate meaningfully into existing creative processes. From the first prompt to a scalable workflow — with a focus on quality over quantity.',
+    tags:['Workflow','Integration','Consulting','Scaling']
+  }
 ];
 let current=0;
 function selectService(i){
@@ -374,7 +374,8 @@ function selectService(i){
   if(current===i&&panel.classList.contains('open')){panel.classList.remove('open');document.querySelectorAll('.svc-card').forEach(c=>c.classList.remove('active'));return;}
   current=i;
   document.querySelectorAll('.svc-card').forEach((c,idx)=>c.classList.toggle('active',idx===i));
-  document.getElementById('svcDesc').textContent=svcData[i].desc;
+  const lang=document.body.classList.contains('lang-en')?'en':'de';
+  document.getElementById('svcDesc').textContent=svcData[i][lang];
   document.getElementById('svcTags').innerHTML=svcData[i].tags.map(t=>`<span class="svc-tag">${t}</span>`).join('');
   panel.classList.add('open');
 }
@@ -383,7 +384,16 @@ const tickerItems=['Creative Conception','AI Production','Storyboard & Animatic'
 const track=document.getElementById('ticker');
 tickerItems.forEach(item=>{const el=document.createElement('span');el.className='ticker-item';el.textContent=item;track.appendChild(el);});
 
-document.getElementById('langToggle').addEventListener('click',()=>{const b=document.body;if(b.classList.contains('lang-de')){b.classList.remove('lang-de');b.classList.add('lang-en');}else{b.classList.remove('lang-en');b.classList.add('lang-de');}});
+document.getElementById('langToggle').addEventListener('click',()=>{
+  const b=document.body;
+  if(b.classList.contains('lang-de')){b.classList.remove('lang-de');b.classList.add('lang-en');}
+  else{b.classList.remove('lang-en');b.classList.add('lang-de');}
+  const panel=document.getElementById('svcPanel');
+  if(panel.classList.contains('open')){
+    const lang=b.classList.contains('lang-en')?'en':'de';
+    document.getElementById('svcDesc').textContent=svcData[current][lang];
+  }
+});
 </script>
 </body>
 </html>
