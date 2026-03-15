@@ -217,13 +217,8 @@ body.lang-de .en-text{display:none}
   </div>
   <div class="svc-panel open" id="svcPanel">
     <div class="svc-panel-inner">
-      <p class="svc-panel-desc" id="svcDesc">Art Direction, Kampagnenkonzepte, Events und Aktivierungen — das kreative Urteil das den Unterschied macht. Von der ersten Idee bis zum fertigen Konzept, immer mit dem Auge für das was wirklich funktioniert.</p>
-      <div class="svc-tags" id="svcTags">
-        <span class="svc-tag">Art Direction</span>
-        <span class="svc-tag">Kampagnen</span>
-        <span class="svc-tag">Events</span>
-        <span class="svc-tag">Aktivierungen</span>
-      </div>
+      <p class="svc-panel-desc" id="svcDesc"></p>
+      <div class="svc-tags" id="svcTags"></div>
     </div>
   </div>
   <div class="network">
@@ -348,8 +343,8 @@ body.lang-de .en-text{display:none}
 <script>
 const svcData=[
   {
-    de:'Art Direction, Kampagnenkonzepte, Events und Aktivierungen — das kreative Urteil das den Unterschied macht. Von der ersten Idee bis zum fertigen Konzept, immer mit dem Auge für das was wirklich funktioniert.',
-    en:'Art direction, campaign concepts, events and activations — the creative judgment that makes the difference. From the first idea to the finished concept, always with an eye for what really works.',
+    de:'Art Direction, Kampagnenkonzepte, Events — das kreative Urteil das den Unterschied macht. Von der ersten Idee bis zum fertigen Konzept, immer mit dem Auge für das was wirklich funktioniert.',
+    en:'Art direction, campaign concepts, events — the creative judgment that makes the difference. From the first idea to the finished concept, always with an eye for what really works.',
     tags_de:['Art Direction','Kampagnen','Events','Concepting'],
     tags_en:['Art Direction','Campaigns','Events','Concepting']
   },
@@ -372,15 +367,25 @@ const svcData=[
     tags_en:['Workflow','Integration','Consulting','Scaling']
   }
 ];
+
 let current=0;
+
+function renderPanel(i, lang){
+  document.getElementById('svcDesc').textContent=svcData[i][lang];
+  document.getElementById('svcTags').innerHTML=svcData[i]['tags_'+lang].map(t=>'<span class="svc-tag">'+t+'</span>').join('');
+}
+
 function selectService(i){
   const panel=document.getElementById('svcPanel');
-  if(current===i&&panel.classList.contains('open')){panel.classList.remove('open');document.querySelectorAll('.svc-card').forEach(c=>c.classList.remove('active'));return;}
+  if(current===i&&panel.classList.contains('open')){
+    panel.classList.remove('open');
+    document.querySelectorAll('.svc-card').forEach(c=>c.classList.remove('active'));
+    return;
+  }
   current=i;
   document.querySelectorAll('.svc-card').forEach((c,idx)=>c.classList.toggle('active',idx===i));
   const lang=document.body.classList.contains('lang-en')?'en':'de';
-  document.getElementById('svcDesc').textContent=svcData[i][lang];
-  document.getElementById('svcTags').innerHTML=svcData[i][`tags_${lang}`].map(t=>`<span class="svc-tag">${t}</span>`).join('');
+  renderPanel(i, lang);
   panel.classList.add('open');
 }
 
@@ -395,43 +400,12 @@ document.getElementById('langToggle').addEventListener('click',()=>{
   const panel=document.getElementById('svcPanel');
   if(panel.classList.contains('open')){
     const lang=b.classList.contains('lang-en')?'en':'de';
-    document.getElementById('svcDesc').textContent=svcData[current][lang];
-    document.getElementById('svcTags').innerHTML=svcData[current][`tags_${lang}`].map(t=>`<span class="svc-tag">${t}</span>`).join('');
+    renderPanel(current, lang);
   }
 });
-</script>
-  }
-];
-let current=0;
-function selectService(i){
-  const panel=document.getElementById('svcPanel');
-  if(current===i&&panel.classList.contains('open')){panel.classList.remove('open');document.querySelectorAll('.svc-card').forEach(c=>c.classList.remove('active'));return;}
-  current=i;
-  document.querySelectorAll('.svc-card').forEach((c,idx)=>c.classList.toggle('active',idx===i));
-  const lang=document.body.classList.contains('lang-en')?'en':'de';
-  document.getElementById('svcDesc').textContent=svcData[i][lang];
-  document.getElementById('svcTags').innerHTML=svcData[i].tags.map(t=>`<span class="svc-tag">${t}</span>`).join('');
-  panel.classList.add('open');
-}
 
-const tickerItems=['Creative Conception','AI Production','Storyboard & Animatic','AI Consulting','Content Creation','Brand Strategy','Creative Direction','Marketing','Visual Storytelling','Creative Conception','AI Production','Storyboard & Animatic','AI Consulting','Content Creation','Event Concepts','Brand Strategy','Creative Direction','Marketing','Visual Storytelling'];
-const track=document.getElementById('ticker');
-tickerItems.forEach(item=>{const el=document.createElement('span');el.className='ticker-item';el.textContent=item;track.appendChild(el);});
-
-document.getElementById('langToggle').addEventListener('click',()=>{
-  const b=document.body;
-  if(b.classList.contains('lang-de')){b.classList.remove('lang-de');b.classList.add('lang-en');}
-  else{b.classList.remove('lang-en');b.classList.add('lang-de');}
-  const panel=document.getElementById('svcPanel');
-  if(panel.classList.contains('open')){
-    const lang=b.classList.contains('lang-en')?'en':'de';
-    document.getElementById('svcDesc').textContent=svcData[current][lang];if(panel.classList.contains('open')){
-    const lang=b.classList.contains('lang-en')?'en':'de';
-    document.getElementById('svcDesc').textContent=svcData[current][lang];
-    document.getElementById('svcTags').innerHTML=svcData[current].tags.map(t=>`<span class="svc-tag">${t}</span>`).join('');
-  }
-  }
-});
+// Init panel on load
+renderPanel(0, 'de');
 </script>
 </body>
 </html>
