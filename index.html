@@ -194,36 +194,28 @@ body.lang-de .en-text{display:none}
     <a href="#contact" class="sec-link de-text">Projekt besprechen →</a>
     <a href="#contact" class="sec-link en-text">Discuss a project →</a>
   </div>
-  <div class="svc-cards">
+  <div class="svc-cards" style="grid-template-columns:repeat(3,1fr)">
     <div class="svc-card active" onclick="selectService(0)">
       <div class="svc-n">01</div>
       <div class="svc-card-title">
-        <span class="de-text">Creative Consulting<br><span>&amp; Conception</span></span>
-        <span class="en-text">Creative Consulting<br><span>&amp; Conception</span></span>
+        <span class="de-text">AI Production<br><span>&amp; Consulting</span></span>
+        <span class="en-text">AI Production<br><span>&amp; Consulting</span></span>
       </div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(1)">
       <div class="svc-n">02</div>
       <div class="svc-card-title">
-        <span class="de-text">Projekt<br><span>Management</span></span>
-        <span class="en-text">Project<br><span>Management</span></span>
+        <span class="de-text">Creative Consulting<br><span>&amp; Conception</span></span>
+        <span class="en-text">Creative Consulting<br><span>&amp; Conception</span></span>
       </div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(2)">
       <div class="svc-n">03</div>
       <div class="svc-card-title">
-        <span class="de-text">AI Production<br><span>&amp; Visualisierung</span></span>
-        <span class="en-text">AI Production<br><span>&amp; Visualisation</span></span>
-      </div>
-      <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
-    </div>
-    <div class="svc-card" onclick="selectService(3)">
-      <div class="svc-n">04</div>
-      <div class="svc-card-title">
-        <span class="de-text">AI Consulting<br><span>&amp; Strategy</span></span>
-        <span class="en-text">AI Consulting<br><span>&amp; Strategy</span></span>
+        <span class="de-text">Projekt<br><span>Management</span></span>
+        <span class="en-text">Project<br><span>Management</span></span>
       </div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
@@ -335,10 +327,10 @@ body.lang-de .en-text{display:none}
   <div class="cta-label">Let's talk.</div>
   <h2 class="cta-h de-text">KI produziert.<br><em>Das Auge entscheidet.</em></h2>
   <h2 class="cta-h en-text">The eye<br><em>your AI is missing.</em></h2>
-  <span class="cta-email">hello@studionotturno.de</span>
+  <span class="cta-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8be3eee7e7e4cbf8fffeefe2e4e5e4fffffef9e5e4a5efee">[email&#160;protected]</a></span>
   <div>
-    <a href="mailto:hello@studionotturno.de" class="btn-dark de-text">Kontakt</a>
-    <a href="mailto:hello@studionotturno.de" class="btn-dark en-text">Get in touch</a>
+    <a href="/cdn-cgi/l/email-protection#b6ded3dadad9f6c5c2c3d2dfd9d8d9c2c2c3c4d8d998d2d3" class="btn-dark de-text">Jetzt schreiben</a>
+    <a href="/cdn-cgi/l/email-protection#1d75787171725d6e696879747273726969686f7372337978" class="btn-dark en-text">Get in touch</a>
   </div>
 </section>
 
@@ -356,8 +348,14 @@ body.lang-de .en-text{display:none}
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const svcData=[
+  {
+    de:'Von Storyboards und Animatics für Kampagnen bis zur skalierten Asset-Produktion für E-Commerce — kuratiert mit Erfahrung, in einem Bruchteil der üblichen Zeit. Plus Beratung wie KI-Tools sinnvoll in bestehende Workflows integriert werden.',
+    en:'From storyboards and animatics for campaigns to scaled asset production for e-commerce — curated with experience, in a fraction of the usual time. Plus consulting on how AI tools integrate meaningfully into existing workflows.',
+    tags_de:['Storyboard','Animatic','Visualisierung','SKU Assets','E-Commerce','Workflow'],
+    tags_en:['Storyboard','Animatic','Visualisation','SKU Assets','E-Commerce','Workflow']
+  },
   {
     de:'Art Direction, Kampagnenkonzepte, Events — das kreative Urteil das den Unterschied macht. Von der ersten Idee bis zum fertigen Konzept, immer mit dem Auge für das was wirklich funktioniert.',
     en:'Art direction, campaign concepts, events — the creative judgment that makes the difference. From the first idea to the finished concept, always with an eye for what really works.',
@@ -369,18 +367,6 @@ const svcData=[
     en:'From brief to delivery. Coordination, timing and execution — no overhead, direct access. I keep everything on track so you can focus on what matters.',
     tags_de:['Briefing','Koordination','Delivery','Timeline'],
     tags_en:['Briefing','Coordination','Delivery','Timeline']
-  },
-  {
-    de:'Storyboards, Animatics und Visualisierungen — skaliert mit KI, kuratiert mit Erfahrung. Die Brücke zwischen kreativer Idee und technischem Output, in einem Bruchteil der üblichen Zeit.',
-    en:'Storyboards, animatics and visualisations — scaled with AI, curated with experience. The bridge between creative idea and technical output, in a fraction of the usual time.',
-    tags_de:['Storyboard','Animatic','Visualisierung','Skalierung'],
-    tags_en:['Storyboard','Animatic','Visualisation','Scaling']
-  },
-  {
-    de:'Wie KI-Tools sinnvoll in bestehende kreative Prozesse integriert werden. Vom ersten Prompt bis zum skalierbaren Workflow — mit dem Fokus auf Qualität statt Quantität.',
-    en:'How AI tools integrate meaningfully into existing creative processes. From the first prompt to a scalable workflow — with a focus on quality over quantity.',
-    tags_de:['Workflow','Integration','Beratung','Skalierung'],
-    tags_en:['Workflow','Integration','Consulting','Scaling']
   }
 ];
 
