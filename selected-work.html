@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selected Work — Studio Notturno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#080808;--cream:#f0f0f0;--muted:#999;--dim:#444;--accent:#c8ff00}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:'Outfit',sans-serif;overflow-x:hidden}
+nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;border-bottom:0.5px solid rgba(255,255,255,0.06);position:sticky;top:0;z-index:100}
+.nav-logo{display:flex;align-items:baseline;gap:0.4rem;text-decoration:none}
+.nav-logo-s{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:300;color:#f0f0f0}
+.nav-logo-n{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--accent)}
+.nav-links{display:flex;gap:2.5rem}.nav-links a{font-size:0.75rem;letter-spacing:0.1em;color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;transition:color 0.3s}.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-lang{font-size:0.7rem;letter-spacing:0.1em;border:0.5px solid rgba(200,255,0,0.3);padding:5px 12px;color:var(--accent);cursor:pointer;background:transparent;font-family:'DM Mono',monospace}
+@keyframes flowGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.page-hero{background:linear-gradient(135deg,#d4ff80,#a0ffcc,#c0f0ff,#e8ff80,#d4ff80);background-size:400% 400%;animation:flowGrad 18s ease infinite;padding:4rem 3rem 3rem}
+.page-est{font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(8,8,8,0.4);margin-bottom:0.75rem;font-family:'DM Mono',monospace}
+.page-h{font-family:'Outfit',sans-serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:200;letter-spacing:-0.03em;color:#080808;line-height:1}
+.page-h span{font-family:'Cormorant Garamond',serif;font-style:italic;opacity:0.65}
+.page-sub{font-size:0.85rem;line-height:1.85;color:rgba(8,8,8,0.55);max-width:520px;font-family:'DM Mono',monospace;margin-top:0.75rem}
+.spec-badge{display:inline-block;margin-top:1rem;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(8,8,8,0.6);border:0.5px solid rgba(8,8,8,0.25);padding:4px 14px;font-family:'DM Mono',monospace}
+.project{display:grid;grid-template-columns:1fr 1fr;border-bottom:0.5px solid rgba(255,255,255,0.04);min-height:480px}
+.project:nth-child(even) .proj-img{order:2}
+.project:nth-child(even) .proj-info{order:1;border-left:none;border-right:0.5px solid rgba(255,255,255,0.04)}
+.proj-img{overflow:hidden;position:relative;min-height:480px;background:#111}
+.proj-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.82) contrast(1.05) saturate(0.75);transition:filter 0.5s,transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.project:hover .proj-img img{filter:brightness(0.92) saturate(0.9);transform:scale(1.02)}
+.proj-info{padding:3.5rem;display:flex;flex-direction:column;justify-content:center;border-left:0.5px solid rgba(255,255,255,0.04)}
+.proj-spec{display:inline-block;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;border:0.5px solid rgba(200,255,0,0.3);color:var(--accent);padding:3px 12px;margin-bottom:1.5rem;width:fit-content;font-family:'DM Mono',monospace}
+.proj-num{font-size:0.62rem;letter-spacing:0.2em;color:var(--accent);margin-bottom:1.2rem;font-family:'DM Mono',monospace}
+.proj-client{font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:200;line-height:1.1;margin-bottom:0.4rem;letter-spacing:-0.02em}
+.proj-client span{color:var(--accent)}
+.proj-type{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;font-family:'DM Mono',monospace}
+.proj-desc{font-size:0.85rem;line-height:1.9;color:var(--muted);margin-bottom:1.5rem;font-family:'DM Mono',monospace}
+.proj-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}
+.tag{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;border:0.5px solid rgba(255,255,255,0.1);padding:5px 12px;color:#777;font-family:'DM Mono',monospace}
+.proj-year{font-size:0.65rem;letter-spacing:0.1em;color:var(--dim);padding-top:1.5rem;border-top:0.5px solid rgba(255,255,255,0.04);font-family:'DM Mono',monospace}
+.cta{padding:3.5rem 3rem;text-align:center;background:var(--accent)}
+.cta-h{font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:200;letter-spacing:-0.02em;color:#080808;line-height:1;margin-bottom:0.75rem}
+.cta-h em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em}
+.cta-p{font-size:0.82rem;color:rgba(8,8,8,0.55);margin-bottom:1.5rem;font-family:'DM Mono',monospace}
+.btn-dark{background:#080808;color:var(--accent);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;padding:13px 28px;cursor:pointer;font-family:'DM Mono',monospace;text-decoration:none;display:inline-block;border:none}
+footer{padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:0.5px solid rgba(255,255,255,0.04)}
+.fl{display:flex;align-items:baseline;gap:0.35rem}.fl-s{font-family:'Outfit',sans-serif;font-size:0.82rem;font-weight:300;color:#444}.fl-n{font-family:'Cormorant Garamond',serif;font-size:0.92rem;font-style:italic;color:var(--accent)}
+.fc{font-size:0.65rem;letter-spacing:0.1em;color:var(--dim);font-family:'DM Mono',monospace}
+.flinks{display:flex;gap:1.5rem}.flinks a{font-size:0.65rem;letter-spacing:0.1em;color:var(--dim);text-decoration:none;font-family:'DM Mono',monospace;transition:color 0.3s}.flinks a:hover{color:var(--accent)}
+body.lang-en .de-text{display:none}
+body.lang-de .en-text{display:none}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}.page-hero{padding:4rem 1.5rem 2.5rem}.project{grid-template-columns:1fr}.project:nth-child(even) .proj-img{order:1}.project:nth-child(even) .proj-info{order:2;border-right:none}.proj-info{padding:2rem 1.5rem;border-left:none}.proj-img{min-height:260px}.cta{padding:3rem 1.5rem}footer{padding:1.5rem;flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body class="lang-de">
+<nav>
+  <a href="index.html" class="nav-logo"><span class="nav-logo-s">Studio</span><span class="nav-logo-n">Notturno</span></a>
+  <div class="nav-links">
+    <a href="index.html#services">What I do.</a>
+    <a href="index.html#about">What I see.</a>
+    <a href="selected-work.html" class="active">What I've done.</a>
+    <a href="index.html#contact">Let's talk.</a>
+  </div>
+  <button class="nav-lang" id="langToggle">DE / EN</button>
+</nav>
+<div class="page-hero">
+  <div class="page-est">EST. 2026</div>
+  <h1 class="page-h">What I've <span>done.</span></h1>
+  <p class="page-sub de-text">Eine Auswahl konzeptioneller Arbeiten — entwickelt als eigenständige kreative Übungen oder im Rahmen von Pitches.</p>
+  <p class="page-sub en-text">A selection of conceptual work — developed as independent creative exercises or pitch concepts.</p>
+  <div class="spec-badge de-text">Spec Work — Konzeptionell, nicht kommerziell beauftragt</div>
+  <div class="spec-badge en-text">Spec Work — Conceptual, not commercially commissioned</div>
+</div>
+<div class="project">
+  <div class="proj-img"><img src="157.1-invideo-anon_bob_2.png" alt="Santé Naturals"></div>
+  <div class="proj-info">
+    <div class="proj-spec">Spec Work</div>
+    <div class="proj-num">01</div>
+    <div class="proj-client">Santé <span>Naturals</span></div>
+    <div class="proj-type de-text">Kampagnenkonzept · Beauty & Skincare</div>
+    <div class="proj-type en-text">Campaign Concept · Beauty & Skincare</div>
+    <p class="proj-desc de-text">Ein konzeptioneller Neustart der Glow-Linie für eine jüngere, diverse Zielgruppe. Authentische Darstellung trifft spielerische Bildsprache — weg vom klassischen Beauty-Kanon, hin zu echter Strahlkraft.</p>
+    <p class="proj-desc en-text">A conceptual relaunch of the Glow range for a younger, more diverse audience. Authentic representation meets playful visual language — away from classic beauty standards, toward genuine radiance.</p>
+    <div class="proj-tags"><span class="tag">Creative Direction</span><span class="tag">Casting</span><span class="tag">AI Production</span><span class="tag">Visual Concept</span></div>
+    <div class="proj-year">2024 · Spec Work</div>
+  </div>
+</div>
+<div class="project">
+  <div class="proj-img"><img src="image-1.webp" alt="Old Spice"></div>
+  <div class="proj-info">
+    <div class="proj-spec">Spec Work</div>
+    <div class="proj-num">02</div>
+    <div class="proj-client">Old <span>Spice</span></div>
+    <div class="proj-type de-text">Produktkampagne · FMCG</div>
+    <div class="proj-type en-text">Product Campaign · FMCG</div>
+    <p class="proj-desc de-text">Konzept für die Fresh High Endurance Linie — das klassische Old Spice Markengefühl in eine modernere, selbstironische Bildsprache übersetzen. Mut, Direktheit und ein Hauch Humor.</p>
+    <p class="proj-desc en-text">Concept for the Fresh High Endurance range — translating Old Spice's classic brand feeling into a more modern, self-aware visual language. Confidence, directness, and a touch of humour.</p>
+    <div class="proj-tags"><span class="tag">Campaign Concept</span><span class="tag">Art Direction</span><span class="tag">Visual Strategy</span></div>
+    <div class="proj-year">2024 · Spec Work</div>
+  </div>
+</div>
+<div class="project">
+  <div class="proj-img"><img src="55.55-invideo-anon_bob_2.png" alt="Luxury Lifestyle"></div>
+  <div class="proj-info">
+    <div class="proj-spec">Spec Work</div>
+    <div class="proj-num">03</div>
+    <div class="proj-client">Luxury <span>Lifestyle</span></div>
+    <div class="proj-type de-text">Kampagnenkonzept · Luxury</div>
+    <div class="proj-type en-text">Campaign Concept · Luxury</div>
+    <p class="proj-desc de-text">Konzeptioneller Entwurf für eine Luxury-Lifestyle-Kampagne am Comer See — europäisches Erbe trifft modernen Luxus. Shooting-Konzept, Casting und Art Direction.</p>
+    <p class="proj-desc en-text">Conceptual draft for a luxury lifestyle campaign on Lake Como — European heritage meets contemporary luxury. Shooting concept, casting and art direction.</p>
+    <div class="proj-tags"><span class="tag">Art Direction</span><span class="tag">Luxury</span><span class="tag">Shooting Concept</span><span class="tag">Casting</span></div>
+    <div class="proj-year">2025 · Spec Work</div>
+  </div>
+</div>
+<div class="cta">
+  <h2 class="cta-h de-text">KI produziert.<br><em>Das Auge entscheidet.</em></h2>
+  <h2 class="cta-h en-text">The eye<br><em>your AI is missing.</em></h2>
+  <p class="cta-p de-text">Lass uns gemeinsam etwas Bemerkenswertes schaffen.</p>
+  <p class="cta-p en-text">Let's create something remarkable together.</p>
+  <a href="index.html#contact" class="btn-dark"><span class="de-text">Kontakt aufnehmen</span><span class="en-text">Get in touch</span></a>
+</div>
+<footer>
+  <div class="fl"><span class="fl-s">Studio</span><span class="fl-n">Notturno</span></div>
+  <div class="fc">EST. 2026 · Düsseldorf</div>
+  <div class="flinks">
+    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+  </div>
+</footer>
+<script>
+document.getElementById('langToggle').addEventListener('click',()=>{const b=document.body;if(b.classList.contains('lang-de')){b.classList.remove('lang-de');b.classList.add('lang-en');}else{b.classList.remove('lang-en');b.classList.add('lang-de');}});
+</script>
+</body>
+</html>

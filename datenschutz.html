@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutz — Studio Notturno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Cormorant+Garamond:ital,wght@1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#080808;--cream:#f0f0f0;--muted:#999;--dim:#333;--accent:#c8ff00}
+html{font-size:16px}body{background:var(--bg);color:var(--cream);font-family:'Outfit',sans-serif;overflow-x:hidden}
+nav{background:rgba(8,8,8,0.96);display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;border-bottom:0.5px solid rgba(255,255,255,0.06);position:sticky;top:0;z-index:100}
+.nav-logo{display:flex;align-items:baseline;gap:0.4rem;text-decoration:none}
+.nav-logo-s{font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:300;color:#f0f0f0}
+.nav-logo-n{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--accent)}
+.nav-links{display:flex;gap:2.5rem}.nav-links a{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace}
+.nav-links a:hover{color:var(--cream)}
+@keyframes flowGrad{0%{background:linear-gradient(135deg,#d4ff80,#c8ff00)}25%{background:linear-gradient(135deg,#a0ffcc,#80ffee)}50%{background:linear-gradient(135deg,#c0f0ff,#a0e8ff)}75%{background:linear-gradient(135deg,#e8ff80,#c8ff40)}100%{background:linear-gradient(135deg,#d4ff80,#c8ff00)}}
+.page-hero{background:linear-gradient(135deg,#d4ff80,#a0ffcc,#c0f0ff,#e8ff80,#d4ff80);background-size:400% 400%;animation:flowGrad 18s ease infinite;padding:3.5rem 3rem 2.5rem}
+.page-est{font-size:0.56rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(8,8,8,0.4);margin-bottom:0.75rem;font-family:'DM Mono',monospace}
+.page-h{font-family:'Outfit',sans-serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:200;letter-spacing:-0.03em;color:#080808;line-height:1}
+.content{padding:3.5rem 3rem 5rem;max-width:700px}
+h2{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:300;color:var(--accent);margin:2.5rem 0 0.6rem;letter-spacing:-0.01em}
+p{font-size:0.72rem;line-height:1.95;letter-spacing:0.02em;color:var(--muted);margin-bottom:0.4rem;font-family:'DM Mono',monospace}
+p a{color:var(--cream);text-decoration:none}p a:hover{color:var(--accent)}
+.divider{height:0.5px;background:rgba(255,255,255,0.06);margin:2rem 0}
+.note{font-size:0.62rem;line-height:1.8;color:var(--dim);margin-top:3rem;border-top:0.5px solid rgba(255,255,255,0.04);padding-top:1.5rem;font-family:'DM Mono',monospace}
+footer{padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:0.5px solid rgba(255,255,255,0.04)}
+.fl{display:flex;align-items:baseline;gap:0.35rem}.fl-s{font-family:'Outfit',sans-serif;font-size:0.78rem;font-weight:300;color:#444}.fl-n{font-family:'Cormorant Garamond',serif;font-size:0.88rem;font-style:italic;color:var(--accent)}
+.fc{font-size:0.55rem;letter-spacing:0.12em;color:var(--dim);font-family:'DM Mono',monospace}
+.flinks a{font-size:0.55rem;letter-spacing:0.12em;color:var(--dim);text-decoration:none;font-family:'DM Mono',monospace;margin-left:1.5rem}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}.page-hero{padding:4rem 1.5rem 2.5rem}.content{padding:2.5rem 1.5rem 4rem}footer{padding:1.5rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><span class="nav-logo-s">Studio</span><span class="nav-logo-n">Notturno</span></a>
+  <div class="nav-links">
+    <a href="index.html#services">What I do.</a>
+    <a href="index.html#about">What I see.</a>
+    <a href="selected-work.html">What I've done.</a>
+    <a href="index.html#contact">Let's talk.</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="page-est">EST. 2026</div>
+  <h1 class="page-h">Datenschutz&shy;erklärung</h1>
+</div>
+<div class="content">
+  <h2>1. Überblick</h2>
+  <p>Diese Hinweise geben einen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
+  <div class="divider"></div>
+  <h2>2. Verantwortlicher</h2>
+  <p>Claudio Soranno · Studio Notturno<br>Musterstrasse 20 · 40212 Düsseldorf<br><br>E-Mail: <a href="mailto:hello@studionotturno.de">hello@studionotturno.de</a></p>
+  <div class="divider"></div>
+  <h2>3. Datenerfassung</h2>
+  <p>Diese Website erhebt keine personenbezogenen Daten über Tracking, Cookies oder Analysetools. Keine Cookies werden gesetzt. Kontaktaufnahme erfolgt ausschließlich per E-Mail auf Initiative der Nutzer.</p>
+  <p>Beim Besuch werden durch den Hosting-Anbieter technische Zugriffsdaten in Server-Logfiles gespeichert (Browser-Typ, IP-Adresse, Uhrzeit). Diese werden nach spätestens 7 Tagen gelöscht. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
+  <div class="divider"></div>
+  <h2>4. Google Fonts</h2>
+  <p>Diese Website nutzt Google Fonts (Google LLC, USA). Beim Laden wird eine Verbindung zu Google-Servern hergestellt, dabei wird Ihre IP-Adresse übermittelt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
+  <p>Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+  <div class="divider"></div>
+  <h2>5. Hosting (Netlify)</h2>
+  <p>Diese Website wird gehostet bei Netlify Inc., San Francisco, USA. Netlify verarbeitet beim Besuch technische Verbindungsdaten. Weitere Informationen: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">netlify.com/privacy</a></p>
+  <div class="divider"></div>
+  <h2>6. E-Mail-Kontakt</h2>
+  <p>Wenn Sie per E-Mail Kontakt aufnehmen, werden die übermittelten Daten zum Zweck der Bearbeitung Ihrer Anfrage gespeichert und nicht ohne Ihre Einwilligung weitergegeben. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+  <div class="divider"></div>
+  <h2>7. Ihre Rechte</h2>
+  <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Sperrung oder Löschung Ihrer gespeicherten Daten.</p>
+  <p>Zuständige Aufsichtsbehörde NRW: Landesbeauftragte für Datenschutz und Informationsfreiheit, <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">ldi.nrw.de</a></p>
+  <p>Anfragen: <a href="mailto:hello@studionotturno.de">hello@studionotturno.de</a></p>
+  <div class="divider"></div>
+  <h2>8. Änderungen</h2>
+  <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen. Stand: März 2026.</p>
+  <div class="note">Für eine rechtsichere Prüfung empfehlen wir den kostenlosen Datenschutzgenerator: datenschutz-generator.de</div>
+</div>
+<footer>
+  <div class="fl"><span class="fl-s">Studio</span><span class="fl-n">Notturno</span></div>
+  <div class="fc">EST. 2026 · Düsseldorf</div>
+  <div class="flinks"><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+</footer>
+</body>
+</html>
