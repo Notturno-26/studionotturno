@@ -1,7 +1,2 @@
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-
-[build.processing]
-  skip_processing = true
+[build]
+  publish = "."
