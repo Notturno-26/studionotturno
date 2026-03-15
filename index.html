@@ -197,22 +197,22 @@ body.lang-de .en-text{display:none}
   <div class="svc-cards">
     <div class="svc-card active" onclick="selectService(0)">
       <div class="svc-n">01</div>
-      <div class="svc-card-title">Creative Consulting<br><span>&amp; Conception</span></div>
+      <div class="svc-card-title"><span class="de-text">Creative Consulting<br><span>& Conception</span></span><span class="en-text">Creative Consulting<br><span>& Conception</span></span></div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(1)">
       <div class="svc-n">02</div>
-      <div class="svc-card-title">Projekt<br><span>Management</span></div>
+      <div class="svc-card-title"><span class="de-text">Projekt<br><span>Management</span></span><span class="en-text">Project<br><span>Management</span></span></div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(2)">
       <div class="svc-n">03</div>
-      <div class="svc-card-title">AI Production<br><span>&amp; Visualisierung</span></div>
+      <div class="svc-card-title"><span class="de-text">AI Production<br><span>& Visualisierung</span></span><span class="en-text">AI Production<br><span>& Visualisation</span></span></div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
     <div class="svc-card" onclick="selectService(3)">
       <div class="svc-n">04</div>
-      <div class="svc-card-title">AI Consulting<br><span>&amp; Strategy</span></div>
+      <div class="svc-card-title"><span class="de-text">AI Consulting<br><span>& Strategy</span></span><span class="en-text">AI Consulting<br><span>& Strategy</span></span></div>
       <div class="svc-hint"><span class="de-text">Mehr erfahren ↓</span><span class="en-text">Learn more ↓</span></div>
     </div>
   </div>
@@ -326,10 +326,10 @@ body.lang-de .en-text{display:none}
   <div class="cta-label">Let's talk.</div>
   <h2 class="cta-h de-text">KI produziert.<br><em>Das Auge entscheidet.</em></h2>
   <h2 class="cta-h en-text">The eye<br><em>your AI is missing.</em></h2>
-  <span class="cta-email">hello@studionotturno.de</span>
+  <span class="cta-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69e939a9a99b6858283929f999899828283849899d89293">[email&#160;protected]</a></span>
   <div>
-    <a href="mailto:hello@studionotturno.de" class="btn-dark de-text">Jetzt schreiben</a>
-    <a href="mailto:hello@studionotturno.de" class="btn-dark en-text">Get in touch</a>
+    <a href="/cdn-cgi/l/email-protection#ec8489808083ac9f989988858382839898999e8283c28889" class="btn-dark de-text">Jetzt schreiben</a>
+    <a href="/cdn-cgi/l/email-protection#afc7cac3c3c0efdcdbdacbc6c0c1c0dbdbdaddc1c081cbca" class="btn-dark en-text">Get in touch</a>
   </div>
 </section>
 
@@ -347,7 +347,7 @@ body.lang-de .en-text{display:none}
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const svcData=[
   {
     de:'Art Direction, Kampagnenkonzepte, Events — das kreative Urteil das den Unterschied macht. Von der ersten Idee bis zum fertigen Konzept, immer mit dem Auge für das was wirklich funktioniert.',
@@ -403,16 +403,3 @@ tickerItems.forEach(item=>{const el=document.createElement('span');el.className=
 document.getElementById('langToggle').addEventListener('click',()=>{
   const b=document.body;
   if(b.classList.contains('lang-de')){b.classList.remove('lang-de');b.classList.add('lang-en');}
-  else{b.classList.remove('lang-en');b.classList.add('lang-de');}
-  const panel=document.getElementById('svcPanel');
-  if(panel.classList.contains('open')){
-    const lang=b.classList.contains('lang-en')?'en':'de';
-    renderPanel(current, lang);
-  }
-});
-
-// Init panel on load
-renderPanel(0, 'de');
-</script>
-</body>
-</html>
