@@ -350,22 +350,56 @@ const svcData=[
   {
     de:'Art Direction, Kampagnenkonzepte, Events und Aktivierungen — das kreative Urteil das den Unterschied macht. Von der ersten Idee bis zum fertigen Konzept, immer mit dem Auge für das was wirklich funktioniert.',
     en:'Art direction, campaign concepts, events and activations — the creative judgment that makes the difference. From the first idea to the finished concept, always with an eye for what really works.',
-    tags:['Art Direction','Campaigns','Events','Concepting']
+    tags_de:['Art Direction','Kampagnen','Events','Concepting'],
+    tags_en:['Art Direction','Campaigns','Events','Concepting']
   },
   {
     de:'Von Brief bis Abgabe. Koordination, Timing und Lieferung — ohne Overhead, mit direktem Zugang. Ich halte die Fäden zusammen damit du dich auf das Wesentliche konzentrieren kannst.',
     en:'From brief to delivery. Coordination, timing and execution — no overhead, direct access. I keep everything on track so you can focus on what matters.',
-    tags:['Briefing','Coordination','Delivery','Timeline']
+    tags_de:['Briefing','Koordination','Delivery','Timeline'],
+    tags_en:['Briefing','Coordination','Delivery','Timeline']
   },
   {
     de:'Storyboards, Animatics und Visualisierungen — skaliert mit KI, kuratiert mit Erfahrung. Die Brücke zwischen kreativer Idee und technischem Output, in einem Bruchteil der üblichen Zeit.',
     en:'Storyboards, animatics and visualisations — scaled with AI, curated with experience. The bridge between creative idea and technical output, in a fraction of the usual time.',
-    tags:['Storyboard','Animatic','Visualisation','Scaling']
+    tags_de:['Storyboard','Animatic','Visualisierung','Skalierung'],
+    tags_en:['Storyboard','Animatic','Visualisation','Scaling']
   },
   {
     de:'Wie KI-Tools sinnvoll in bestehende kreative Prozesse integriert werden. Vom ersten Prompt bis zum skalierbaren Workflow — mit dem Fokus auf Qualität statt Quantität.',
     en:'How AI tools integrate meaningfully into existing creative processes. From the first prompt to a scalable workflow — with a focus on quality over quantity.',
-    tags:['Workflow','Integration','Consulting','Scaling']
+    tags_de:['Workflow','Integration','Beratung','Skalierung'],
+    tags_en:['Workflow','Integration','Consulting','Scaling']
+  }
+];
+let current=0;
+function selectService(i){
+  const panel=document.getElementById('svcPanel');
+  if(current===i&&panel.classList.contains('open')){panel.classList.remove('open');document.querySelectorAll('.svc-card').forEach(c=>c.classList.remove('active'));return;}
+  current=i;
+  document.querySelectorAll('.svc-card').forEach((c,idx)=>c.classList.toggle('active',idx===i));
+  const lang=document.body.classList.contains('lang-en')?'en':'de';
+  document.getElementById('svcDesc').textContent=svcData[i][lang];
+  document.getElementById('svcTags').innerHTML=svcData[i][`tags_${lang}`].map(t=>`<span class="svc-tag">${t}</span>`).join('');
+  panel.classList.add('open');
+}
+
+const tickerItems=['Creative Conception','AI Production','Storyboard & Animatic','AI Consulting','Content Creation','Brand Strategy','Creative Direction','Marketing','Visual Storytelling','Creative Conception','AI Production','Storyboard & Animatic','AI Consulting','Content Creation','Event Concepts','Brand Strategy','Creative Direction','Marketing','Visual Storytelling'];
+const track=document.getElementById('ticker');
+tickerItems.forEach(item=>{const el=document.createElement('span');el.className='ticker-item';el.textContent=item;track.appendChild(el);});
+
+document.getElementById('langToggle').addEventListener('click',()=>{
+  const b=document.body;
+  if(b.classList.contains('lang-de')){b.classList.remove('lang-de');b.classList.add('lang-en');}
+  else{b.classList.remove('lang-en');b.classList.add('lang-de');}
+  const panel=document.getElementById('svcPanel');
+  if(panel.classList.contains('open')){
+    const lang=b.classList.contains('lang-en')?'en':'de';
+    document.getElementById('svcDesc').textContent=svcData[current][lang];
+    document.getElementById('svcTags').innerHTML=svcData[current][`tags_${lang}`].map(t=>`<span class="svc-tag">${t}</span>`).join('');
+  }
+});
+</script>
   }
 ];
 let current=0;
