@@ -22,29 +22,41 @@ nav{background:rgba(8,8,8,0.96);backdrop-filter:blur(12px);display:flex;align-it
 .page-h{font-family:'Outfit',sans-serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:200;letter-spacing:-0.03em;color:#080808;line-height:1}
 .page-h span{font-family:'Cormorant Garamond',serif;font-style:italic;opacity:0.65}
 .page-sub{font-size:0.85rem;line-height:1.85;color:rgba(8,8,8,0.55);max-width:520px;font-family:'DM Mono',monospace;margin-top:0.75rem}
-.work-section{padding:3rem}
-.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:0.5px solid rgba(255,255,255,0.06)}
+.work-section{padding:2.5rem 3rem}
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:0.5px solid rgba(255,255,255,0.06)}
 .filter-btn{font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;padding:6px 14px;border:0.5px solid rgba(255,255,255,0.15);color:#777;font-family:'DM Mono',monospace;cursor:pointer;background:transparent;transition:all 0.3s}
 .filter-btn:hover{border-color:rgba(200,255,0,0.4);color:var(--accent)}
 .filter-btn.active{background:var(--accent);color:#080808;border-color:var(--accent)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .proj{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4;transition:opacity 0.5s ease,filter 0.5s ease,transform 0.5s ease}
 .proj img{width:100%;height:100%;object-fit:cover;filter:brightness(0.82) saturate(0.75);transition:transform 0.6s cubic-bezier(0.16,1,0.3,1),filter 0.4s}
 .proj:hover img{transform:scale(1.04);filter:brightness(0.55) saturate(0.4)}
-.proj.dimmed{opacity:0.15;filter:blur(3px);transform:scale(0.97);pointer-events:none}
-.proj-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;background:linear-gradient(to top,rgba(8,8,8,0.92) 0%,transparent 60%);opacity:0;transition:opacity 0.4s ease}
+.proj.dimmed{opacity:0.12;filter:blur(4px);transform:scale(0.96);pointer-events:none}
+.proj-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1rem;background:linear-gradient(to top,rgba(8,8,8,0.92) 0%,transparent 60%);opacity:0;transition:opacity 0.4s ease}
 .proj:hover .proj-overlay{opacity:1}
-.proj-num{font-size:0.6rem;letter-spacing:0.2em;color:var(--accent);font-family:'DM Mono',monospace;margin-bottom:0.4rem;transform:translateY(8px);opacity:0;transition:transform 0.4s ease 0.05s,opacity 0.4s ease 0.05s}
+.proj-num{font-size:0.55rem;letter-spacing:0.2em;color:var(--accent);font-family:'DM Mono',monospace;margin-bottom:0.3rem;transform:translateY(8px);opacity:0;transition:transform 0.4s ease 0.05s,opacity 0.4s ease 0.05s}
 .proj:hover .proj-num{transform:translateY(0);opacity:1}
-.proj-title{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:200;color:#f0f0f0;line-height:1.2;transform:translateY(10px);opacity:0;transition:transform 0.4s ease 0.1s,opacity 0.4s ease 0.1s}
+.proj-title{font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:200;color:#f0f0f0;line-height:1.2;transform:translateY(10px);opacity:0;transition:transform 0.4s ease 0.1s,opacity 0.4s ease 0.1s}
 .proj:hover .proj-title{transform:translateY(0);opacity:1}
 .proj-title em{color:var(--accent);font-family:'Cormorant Garamond',serif;font-style:italic}
-.proj-type{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:#aaa;font-family:'DM Mono',monospace;margin-top:0.3rem;transform:translateY(10px);opacity:0;transition:transform 0.4s ease 0.15s,opacity 0.4s ease 0.15s}
+.proj-type{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:#aaa;font-family:'DM Mono',monospace;margin-top:0.2rem;transform:translateY(10px);opacity:0;transition:transform 0.4s ease 0.15s,opacity 0.4s ease 0.15s}
 .proj:hover .proj-type{transform:translateY(0);opacity:1}
-.proj-cta{display:inline-block;margin-top:0.6rem;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);font-family:'DM Mono',monospace;border-bottom:0.5px solid rgba(200,255,0,0.4);padding-bottom:2px;transform:translateY(10px);opacity:0;transition:transform 0.4s ease 0.2s,opacity 0.4s ease 0.2s}
-.proj:hover .proj-cta{transform:translateY(0);opacity:1}
-.proj-spec{position:absolute;top:1rem;left:1rem;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;background:rgba(8,8,8,0.7);border:0.5px solid rgba(200,255,0,0.3);color:var(--accent);padding:3px 10px;font-family:'DM Mono',monospace;opacity:0;transform:translateY(-6px);transition:opacity 0.4s ease 0.1s,transform 0.4s ease 0.1s}
+.proj-spec{position:absolute;top:0.75rem;left:0.75rem;font-size:0.5rem;letter-spacing:0.1em;text-transform:uppercase;background:rgba(8,8,8,0.7);border:0.5px solid rgba(200,255,0,0.3);color:var(--accent);padding:2px 8px;font-family:'DM Mono',monospace;opacity:0;transform:translateY(-6px);transition:opacity 0.4s ease 0.1s,transform 0.4s ease 0.1s}
 .proj:hover .proj-spec{opacity:1;transform:translateY(0)}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(8,8,8,0.95);z-index:200;align-items:center;justify-content:center;padding:2rem}
+.lightbox.open{display:flex}
+.lightbox-inner{position:relative;max-width:900px;width:100%}
+.lightbox img{width:100%;max-height:85vh;object-fit:contain}
+.lightbox-info{margin-top:1rem;display:flex;justify-content:space-between;align-items:flex-end}
+.lightbox-title{font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:200;color:#f0f0f0}
+.lightbox-title em{color:var(--accent);font-family:'Cormorant Garamond',serif;font-style:italic}
+.lightbox-type{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);font-family:'DM Mono',monospace;margin-top:0.3rem}
+.lightbox-close{position:absolute;top:-2.5rem;right:0;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);cursor:pointer;font-family:'DM Mono',monospace;border:none;background:transparent}
+.lightbox-close:hover{color:var(--accent)}
+.lightbox-nav{display:flex;gap:1rem}
+.lightbox-nav button{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);cursor:pointer;font-family:'DM Mono',monospace;border:0.5px solid rgba(255,255,255,0.15);background:transparent;padding:6px 14px;transition:all 0.3s}
+.lightbox-nav button:hover{color:var(--accent);border-color:rgba(200,255,0,0.4)}
+.lightbox-spec{font-size:0.5rem;letter-spacing:0.1em;text-transform:uppercase;border:0.5px solid rgba(200,255,0,0.3);color:var(--accent);padding:2px 8px;font-family:'DM Mono',monospace;margin-bottom:0.5rem;display:inline-block}
 .cta{padding:4rem 3rem;text-align:center;background:var(--accent)}
 .cta-h{font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:200;letter-spacing:-0.02em;color:#080808;line-height:1;margin-bottom:0.75rem}
 .cta-h em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em}
@@ -56,7 +68,7 @@ footer{padding:1.5rem 3rem;display:flex;justify-content:space-between;align-item
 .flinks{display:flex;gap:1.5rem}.flinks a{font-size:0.65rem;letter-spacing:0.1em;color:var(--dim);text-decoration:none;font-family:'DM Mono',monospace;transition:color 0.3s}.flinks a:hover{color:var(--accent)}
 body.lang-en .de-text{display:none}
 body.lang-de .en-text{display:none}
-@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}.page-hero{padding:4rem 1.5rem 2.5rem}.work-section{padding:2rem 1.5rem}.grid{grid-template-columns:1fr 1fr}.cta{padding:3rem 1.5rem}footer{padding:1.5rem;flex-direction:column;align-items:flex-start}}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}.page-hero{padding:4rem 1.5rem 2.5rem}.work-section{padding:2rem 1.5rem}.grid{grid-template-columns:repeat(2,1fr)}.cta{padding:3rem 1.5rem}footer{padding:1.5rem;flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body class="lang-de">
@@ -87,9 +99,8 @@ body.lang-de .en-text{display:none}
     <button class="filter-btn" onclick="filter('storyboard',this)">Storyboard &amp; Animatic</button>
   </div>
 
-  <div class="grid">
-
-    <div class="proj" data-category="product">
+  <div class="grid" id="grid">
+    <div class="proj" data-category="product" data-title="Elouise Jewelry" data-type-de="Product Shots · Schmuck" data-type-en="Product Shots · Jewelry" data-spec="Client Work" data-num="01" onclick="openLightbox(this)">
       <img src="work1.png" alt="Elouise Jewelry">
       <div class="proj-spec">Client Work</div>
       <div class="proj-overlay">
@@ -97,11 +108,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Elouise <em>Jewelry</em></div>
         <div class="proj-type de-text">Product Shots · Schmuck</div>
         <div class="proj-type en-text">Product Shots · Jewelry</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="fashion">
+    <div class="proj" data-category="fashion" data-title="Virtual Influencer" data-type-de="Digital Casting · AI Production" data-type-en="Digital Casting · AI Production" data-spec="Spec Work" data-num="02" onclick="openLightbox(this)">
       <img src="work2.png" alt="Virtual Influencer">
       <div class="proj-spec">Spec Work</div>
       <div class="proj-overlay">
@@ -109,11 +119,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Virtual <em>Influencer</em></div>
         <div class="proj-type de-text">Digital Casting · AI Production</div>
         <div class="proj-type en-text">Digital Casting · AI Production</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="beauty">
+    <div class="proj" data-category="beauty" data-title="Weleda Serum" data-type-de="Kampagne · Beauty" data-type-en="Campaign · Beauty" data-spec="Client Work" data-num="03" onclick="openLightbox(this)">
       <img src="work3.jpeg" alt="Weleda">
       <div class="proj-spec">Client Work</div>
       <div class="proj-overlay">
@@ -121,11 +130,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Weleda <em>Serum</em></div>
         <div class="proj-type de-text">Kampagne · Beauty</div>
         <div class="proj-type en-text">Campaign · Beauty</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="beauty">
+    <div class="proj" data-category="beauty" data-title="Weleda Skin Food" data-type-de="Kampagne · Beauty" data-type-en="Campaign · Beauty" data-spec="Client Work" data-num="04" onclick="openLightbox(this)">
       <img src="work4.jpeg" alt="Weleda Skin Food">
       <div class="proj-spec">Client Work</div>
       <div class="proj-overlay">
@@ -133,11 +141,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Weleda <em>Skin Food</em></div>
         <div class="proj-type de-text">Kampagne · Beauty</div>
         <div class="proj-type en-text">Campaign · Beauty</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="fashion">
+    <div class="proj" data-category="fashion" data-title="Balenciaga" data-type-de="Kampagnenkonzept · Fashion" data-type-en="Campaign Concept · Fashion" data-spec="Spec Work" data-num="05" onclick="openLightbox(this)">
       <img src="work5.jpeg" alt="Balenciaga">
       <div class="proj-spec">Spec Work</div>
       <div class="proj-overlay">
@@ -145,11 +152,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Balen<em>ciaga</em></div>
         <div class="proj-type de-text">Kampagnenkonzept · Fashion</div>
         <div class="proj-type en-text">Campaign Concept · Fashion</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="fashion">
+    <div class="proj" data-category="fashion" data-title="Calvin Klein" data-type-de="Kampagnenkonzept · Fashion" data-type-en="Campaign Concept · Fashion" data-spec="Spec Work" data-num="06" onclick="openLightbox(this)">
       <img src="work6.jpeg" alt="Calvin Klein">
       <div class="proj-spec">Spec Work</div>
       <div class="proj-overlay">
@@ -157,11 +163,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Calvin <em>Klein</em></div>
         <div class="proj-type de-text">Kampagnenkonzept · Fashion</div>
         <div class="proj-type en-text">Campaign Concept · Fashion</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="fashion">
+    <div class="proj" data-category="fashion" data-title="Fashion Editorial" data-type-de="Editorial · Menswear" data-type-en="Editorial · Menswear" data-spec="Spec Work" data-num="07" onclick="openLightbox(this)">
       <img src="work7.jpeg" alt="Fashion Editorial">
       <div class="proj-spec">Spec Work</div>
       <div class="proj-overlay">
@@ -169,11 +174,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Fashion <em>Editorial</em></div>
         <div class="proj-type de-text">Editorial · Menswear</div>
         <div class="proj-type en-text">Editorial · Menswear</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="fashion">
+    <div class="proj" data-category="fashion" data-title="Fashion Editorial" data-type-de="Editorial · Womenswear" data-type-en="Editorial · Womenswear" data-spec="Spec Work" data-num="08" onclick="openLightbox(this)">
       <img src="work8.jpeg" alt="Fashion Editorial">
       <div class="proj-spec">Spec Work</div>
       <div class="proj-overlay">
@@ -181,11 +185,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Fashion <em>Editorial</em></div>
         <div class="proj-type de-text">Editorial · Womenswear</div>
         <div class="proj-type en-text">Editorial · Womenswear</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="fashion">
+    <div class="proj" data-category="fashion" data-title="Fashion Editorial" data-type-de="Editorial · Womenswear" data-type-en="Editorial · Womenswear" data-spec="Spec Work" data-num="09" onclick="openLightbox(this)">
       <img src="work9.jpeg" alt="Fashion Editorial">
       <div class="proj-spec">Spec Work</div>
       <div class="proj-overlay">
@@ -193,11 +196,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Fashion <em>Editorial</em></div>
         <div class="proj-type de-text">Editorial · Womenswear</div>
         <div class="proj-type en-text">Editorial · Womenswear</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="beauty">
+    <div class="proj" data-category="beauty" data-title="Lifestyle Beauty" data-type-de="Lifestyle · Beauty" data-type-en="Lifestyle · Beauty" data-spec="Spec Work" data-num="10" onclick="openLightbox(this)">
       <img src="work10.jpeg" alt="Lifestyle Beauty">
       <div class="proj-spec">Spec Work</div>
       <div class="proj-overlay">
@@ -205,11 +207,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Lifestyle <em>Beauty</em></div>
         <div class="proj-type de-text">Lifestyle · Beauty</div>
         <div class="proj-type en-text">Lifestyle · Beauty</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="beauty">
+    <div class="proj" data-category="beauty" data-title="Beauty Campaign" data-type-de="Kampagnenkonzept · Lifestyle" data-type-en="Campaign Concept · Lifestyle" data-spec="Spec Work" data-num="11" onclick="openLightbox(this)">
       <img src="work11.jpeg" alt="Beauty Campaign">
       <div class="proj-spec">Spec Work</div>
       <div class="proj-overlay">
@@ -217,11 +218,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Beauty <em>Campaign</em></div>
         <div class="proj-type de-text">Kampagnenkonzept · Lifestyle</div>
         <div class="proj-type en-text">Campaign Concept · Lifestyle</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="product">
+    <div class="proj" data-category="product" data-title="Nike Sport" data-type-de="Product Visual · Sport" data-type-en="Product Visual · Sport" data-spec="Spec Work" data-num="12" onclick="openLightbox(this)">
       <img src="work12.png" alt="Nike">
       <div class="proj-spec">Spec Work</div>
       <div class="proj-overlay">
@@ -229,11 +229,10 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">Nike <em>Sport</em></div>
         <div class="proj-type de-text">Product Visual · Sport</div>
         <div class="proj-type en-text">Product Visual · Sport</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
-    <div class="proj" data-category="storyboard">
+    <div class="proj" data-category="storyboard" data-title="David Guetta" data-type-de="Animatic · Universal Music" data-type-en="Animatic · Universal Music" data-spec="Client Work" data-num="13" onclick="openLightbox(this)">
       <img src="work13.png" alt="David Guetta">
       <div class="proj-spec">Client Work</div>
       <div class="proj-overlay">
@@ -241,10 +240,27 @@ body.lang-de .en-text{display:none}
         <div class="proj-title">David <em>Guetta</em></div>
         <div class="proj-type de-text">Animatic · Universal Music</div>
         <div class="proj-type en-text">Animatic · Universal Music</div>
-        <span class="proj-cta">View project</span>
       </div>
     </div>
 
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()">Schließen ×</button>
+    <img id="lbImg" src="" alt="">
+    <div class="lightbox-info">
+      <div>
+        <div id="lbSpec" class="lightbox-spec"></div>
+        <div id="lbTitle" class="lightbox-title"></div>
+        <div id="lbType" class="lightbox-type"></div>
+      </div>
+      <div class="lightbox-nav">
+        <button onclick="navLightbox(-1)">← Prev</button>
+        <button onclick="navLightbox(1)">Next →</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -267,19 +283,72 @@ body.lang-de .en-text{display:none}
 </footer>
 
 <script>
+var allProjs = [];
+var visibleProjs = [];
+var currentLbIndex = 0;
+var currentLang = 'de';
+
+function init() {
+  allProjs = Array.from(document.querySelectorAll('.proj'));
+  visibleProjs = allProjs.slice();
+}
+
 function filter(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
   btn.classList.add('active');
-  document.querySelectorAll('.proj').forEach(function(p){
-    if(cat==='all'||p.dataset.category===cat){p.classList.remove('dimmed');}
-    else{p.classList.add('dimmed');}
+  var grid = document.getElementById('grid');
+  var toShow = [];
+  var toHide = [];
+  allProjs.forEach(function(p){
+    if(cat==='all'||p.dataset.category===cat){toShow.push(p);}
+    else{toHide.push(p);}
   });
+  toHide.forEach(function(p){p.classList.add('dimmed');});
+  toShow.forEach(function(p){p.classList.remove('dimmed');grid.appendChild(p);});
+  toHide.forEach(function(p){grid.appendChild(p);});
+  visibleProjs = toShow;
 }
+
+function openLightbox(el) {
+  var img = el.querySelector('img');
+  var lang = document.body.classList.contains('lang-en') ? 'en' : 'de';
+  document.getElementById('lbImg').src = img.src;
+  document.getElementById('lbTitle').innerHTML = el.dataset.title.replace(/(\S+)\s+(\S+)/, '$1 <em>$2</em>');
+  document.getElementById('lbType').textContent = lang === 'en' ? el.dataset.typeEn : el.dataset.typeDe;
+  document.getElementById('lbSpec').textContent = el.dataset.spec;
+  currentLbIndex = visibleProjs.indexOf(el);
+  if(currentLbIndex === -1) currentLbIndex = allProjs.indexOf(el);
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e) {
+  if(e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function navLightbox(dir) {
+  var list = visibleProjs.length ? visibleProjs : allProjs;
+  currentLbIndex = (currentLbIndex + dir + list.length) % list.length;
+  openLightbox(list[currentLbIndex]);
+}
+
 document.getElementById('langToggle').addEventListener('click',function(){
   var b=document.body;
-  if(b.classList.contains('lang-de')){b.classList.remove('lang-de');b.classList.add('lang-en');}
-  else{b.classList.remove('lang-en');b.classList.add('lang-de');}
+  if(b.classList.contains('lang-de')){b.classList.remove('lang-de');b.classList.add('lang-en');currentLang='en';}
+  else{b.classList.remove('lang-en');b.classList.add('lang-de');currentLang='de';}
 });
+
+document.addEventListener('keydown',function(e){
+  if(document.getElementById('lightbox').classList.contains('open')){
+    if(e.key==='Escape')closeLightbox({target:document.getElementById('lightbox')});
+    if(e.key==='ArrowLeft')navLightbox(-1);
+    if(e.key==='ArrowRight')navLightbox(1);
+  }
+});
+
+init();
 </script>
 </body>
 </html>
